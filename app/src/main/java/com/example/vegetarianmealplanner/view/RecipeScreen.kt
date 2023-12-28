@@ -7,8 +7,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import com.example.vegetarianmealplanner.ui.theme.Purple40
+import com.example.vegetarianmealplanner.ui.theme.VegetarianMealPlannerTheme
 
 @Composable
 fun RecipeScreen(){
@@ -17,5 +19,13 @@ fun RecipeScreen(){
         .background(Purple40),
     contentAlignment = Alignment.Center) {
         Text(text = "Recipe", fontSize = 100.sp)
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun Preview1() {
+    VegetarianMealPlannerTheme {
+        RecipeScreen()
     }
 }
