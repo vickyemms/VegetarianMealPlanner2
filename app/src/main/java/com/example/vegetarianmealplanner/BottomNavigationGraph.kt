@@ -1,6 +1,7 @@
 package com.example.vegetarianmealplanner
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -10,7 +11,7 @@ import com.example.vegetarianmealplanner.view.RecipeScreen
 
 
 @Composable
-fun BottomNavGraph(navController: NavHostController){
+fun BottomNavGraph(navController: NavHostController, padding: Modifier){
     NavHost(
         navController = navController,
         startDestination = BottomBarScreen.Recipe.route
