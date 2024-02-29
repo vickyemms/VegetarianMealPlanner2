@@ -17,7 +17,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
-import com.example.vegetarianmealplanner.BottomNavigationItem
+import com.example.vegetarianmealplanner.model.BottomNavigationItem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

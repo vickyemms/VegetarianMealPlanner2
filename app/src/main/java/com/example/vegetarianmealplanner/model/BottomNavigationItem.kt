@@ -1,10 +1,11 @@
-package com.example.vegetarianmealplanner
+package com.example.vegetarianmealplanner.model
 
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.AccountCircle
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.ui.graphics.vector.ImageVector
+import com.example.vegetarianmealplanner.Screens
 
 data class BottomNavigationItem(
     val label : String = "",
