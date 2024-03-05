@@ -1,6 +1,7 @@
 package com.example.vegetarianmealplanner.view
 
-import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -58,7 +59,9 @@ fun BottomNavigationBar() {
             }
         }
     ) {padding ->
-        BottomNavGraph(navController = navController)
-        Spacer(modifier = Modifier.padding(padding))
+        Box(modifier = Modifier.padding(
+            PaddingValues(bottom = padding.calculateBottomPadding()))) {
+                BottomNavGraph(navController = navController)
+            }
     }
 }

@@ -30,7 +30,6 @@ fun RecipeScreen(){
     LazyColumn(
         modifier = Modifier
             .fillMaxSize()
-            .padding(top = 60.dp)
             .padding(5.dp)
     ){
         items(recipes.size){recipe ->
