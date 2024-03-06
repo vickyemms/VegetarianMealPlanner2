@@ -31,7 +31,7 @@ fun TopBar() {
         Box(modifier = Modifier.padding(
             PaddingValues(top = padding.calculateTopPadding())
         )) {
-            BottomNavigationBar()
+            BottomNavBar()
         }
     }
 }

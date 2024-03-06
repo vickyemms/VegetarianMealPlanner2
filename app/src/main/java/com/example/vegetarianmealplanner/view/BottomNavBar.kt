@@ -22,7 +22,7 @@ import com.example.vegetarianmealplanner.model.BottomNavigationItem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun BottomNavigationBar() {
+fun BottomNavBar() {
     var navigationSelectedItem by remember { mutableIntStateOf(0) }
 
     val navController = rememberNavController()

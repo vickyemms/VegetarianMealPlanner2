@@ -16,14 +16,14 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.painter.Painter
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import com.example.vegetarianmealplanner.Screens
 import com.example.vegetarianmealplanner.data.RecipeData
-import com.example.vegetarianmealplanner.ui.theme.VegetarianMealPlannerTheme
 
 @Composable
-fun RecipeScreen(){
+fun RecipeScreen(navController: NavHostController){
 
     val recipes = RecipeData.recipes
 
@@ -39,7 +39,7 @@ fun RecipeScreen(){
             Column (modifier = Modifier
                 .padding(5.dp)
                 .clickable {
-
+                    navController.navigate(Screens.RecipeDetails.route)
                 }
             ) {
                 Text(
@@ -64,13 +64,5 @@ fun RecipeScreen(){
                 }
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun Preview1() {
-    VegetarianMealPlannerTheme {
-        RecipeScreen()
     }
 }

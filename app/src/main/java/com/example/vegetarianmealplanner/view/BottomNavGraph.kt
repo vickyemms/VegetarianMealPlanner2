@@ -15,13 +15,16 @@ fun BottomNavGraph(navController: NavHostController) {
         modifier = Modifier
     ) {
         composable(route = Screens.Recipes.route) {
-            RecipeScreen()
+            RecipeScreen(navController = navController)
         }
         composable(route = Screens.Planner.route) {
             PlannerScreen()
         }
         composable(route = Screens.GroceryList.route) {
             GroceryListScreen()
+        }
+        composable(route = Screens.RecipeDetails.route) {
+            RecipeDetailsScreen()
         }
     }
 }
