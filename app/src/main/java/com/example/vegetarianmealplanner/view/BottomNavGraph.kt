@@ -23,8 +23,10 @@ fun BottomNavGraph(navController: NavHostController) {
         composable(route = Screens.GroceryList.route) {
             GroceryListScreen()
         }
-        composable(route = Screens.RecipeDetails.route) {
-            RecipeDetailsScreen()
+        composable(route = Screens.RecipeDetails.route) {backStackEntry ->
+            val arguments = requireNotNull(backStackEntry.arguments)
+            val recipeName = arguments.getString("recipeName") ?: ""
+            RecipeDetailsScreen(recipeName)
         }
     }
 }

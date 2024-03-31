@@ -11,11 +11,11 @@ import androidx.compose.ui.unit.sp
 import com.example.vegetarianmealplanner.ui.theme.Purple80
 
 @Composable
-fun RecipeDetailsScreen(){
+fun RecipeDetailsScreen(recipeName: String){
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Purple80),
         contentAlignment = Alignment.Center) {
-        Text(text = "Recipe Details", fontSize = 100.sp)
+        Text(text = recipeName, fontSize = 100.sp)
     }
 }

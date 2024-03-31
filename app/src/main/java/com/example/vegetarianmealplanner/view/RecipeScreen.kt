@@ -39,7 +39,7 @@ fun RecipeScreen(navController: NavHostController){
             Column (modifier = Modifier
                 .padding(5.dp)
                 .clickable {
-                    navController.navigate(Screens.RecipeDetails.route)
+                    navController.navigate("${Screens.RecipeDetails.route}?recipeName=${recipes[recipe].name}")
                 }
             ) {
                 Text(
