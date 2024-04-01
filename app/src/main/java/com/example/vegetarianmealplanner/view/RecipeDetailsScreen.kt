@@ -1,5 +1,6 @@
 package com.example.vegetarianmealplanner.view
 
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -12,6 +13,7 @@ import com.example.vegetarianmealplanner.ui.theme.Purple80
 
 @Composable
 fun RecipeDetailsScreen(recipeName: String){
+    Log.d("RecipeDetailsScreen", "Recipe name received: $recipeName")
     Box(modifier = Modifier
         .fillMaxSize()
         .background(Purple80),

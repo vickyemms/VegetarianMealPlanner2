@@ -1,5 +1,6 @@
 package com.example.vegetarianmealplanner.view
 
+import android.util.Log
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -39,7 +40,9 @@ fun RecipeScreen(navController: NavHostController){
             Column (modifier = Modifier
                 .padding(5.dp)
                 .clickable {
-                    navController.navigate("${Screens.RecipeDetails.route}?recipeName=${recipes[recipe].name}")
+                    val recipeName = recipes[recipe].name
+                    Log.d("RecipeName", "Navigating to RecipeDetailsScreen with recipe name: $recipeName")
+                    navController.navigate("${Screens.RecipeDetails.route}?recipeName=$recipeName")
                 }
             ) {
                 Text(
